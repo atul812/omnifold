@@ -1,0 +1,67 @@
+dataset:
+  name: "Nominal Drell-Yan Sample"
+  file: "multifold.h5"
+  n_events: 418014
+  description: "Nominal Monte Carlo sample used for OmniFold reweighting"
+
+samples:
+  related_files:
+    - file: "multifold_sherpa.h5"
+      n_events: 326430
+      description: "Sherpa comparison sample"
+    - file: "multifold_nonDY.h5"
+      n_events: 433397
+      description: "Non-Drell-Yan background sample"
+
+generation:
+  process: "Drell-Yan dilepton production"
+  generator: "Not specified"
+  center_of_mass_energy: "Not specified"
+  units:
+    momentum: "GeV"
+    angles: "radians"
+
+observables:
+  n_observables: 25
+  type: "Kinematic variables"
+  description: "Event-level observables including pT, eta, phi, and rapidity"
+  examples:
+    - pT_ll
+    - pT_l1
+    - pT_l2
+    - eta_l1
+    - eta_l2
+    - phi_l1
+    - phi_l2
+    - y_ll
+
+weights:
+  n_weight_columns: 175
+  nominal_weight: "weights_lumi"
+  systematic_weights:
+    - weights_trackPtScale
+    - weights_theoryPSjet
+    - weights_theoryPSsoft
+    - weights_theoryPDF
+    - weights_theoryMPI
+    - weights_theoryPSscale
+    - weights_theoryAlphaS
+    - weights_theoryQCD
+    - weights_topBackground
+  combination_rule: "Weights are multiplicative unless otherwise specified"
+  description: "Each weight column represents a systematic variation or correction factor"
+
+unfolding:
+  method: "OmniFold"
+  version: "Not specified"
+  training_iterations: "Not specified"
+  training_details: "Neural network configuration not provided"
+
+normalization:
+  luminosity_normalized: "Assumed via weights_lumi"
+  cross_section_provided: "No"
+  event_weight_definition: "Per-event multiplicative weights"
+
+event_selection:
+  description: "Dilepton final state"
+  selection_criteria: "Not explicitly provided in file"
