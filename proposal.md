@@ -24,7 +24,7 @@
 
 ### 1.2 About Me
 
-I am Atul Kumar. I'm a third year undergraduate student at RNS Institute of Technology, Bengaluru, pursuing a Bachelor of Engineering in Information Science and Engineering.
+My name is Atul Kumar. I'm a third year undergraduate student at RNS Institute of Technology, Bengaluru, pursuing a Bachelor of Engineering in Information Science and Engineering.
 
 My primary language is Python. I work with it for data processing, structured file handling, and algorithm design. I am comfortable with libraries including NumPy, Pandas, h5py, and Matplotlib, and I have used Jupyter notebooks for exploratory analysis. I have a working understanding of YAML and JSON for structured data representation, and have basic familiarity with HTML, CSS, and JavaScript for web related tasks.
 
